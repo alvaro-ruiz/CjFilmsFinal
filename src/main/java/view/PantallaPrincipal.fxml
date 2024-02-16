@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="640.0" prefWidth="1024.0" stylesheets="/application/application.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PrincipalController">
+   <children>
+      <BorderPane prefHeight="640.0" prefWidth="1024.0">
+         <top>
+            <Pane prefHeight="120.0" prefWidth="1024.0" style="-fx-background-color: E4D829;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="107.0" fitWidth="156.0" layoutX="-19.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/logoCJFilms.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="383.0" layoutY="45.0" onMouseClicked="#showBuscar" prefHeight="32.0" prefWidth="84.0" text="Buscador">
+                     <font>
+                        <Font name="Corbel Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="479.0" layoutY="44.0" onMouseClicked="#showBiblioteca" prefHeight="32.0" prefWidth="90.0" text="Biblioteca">
+                     <font>
+                        <Font name="Corbel Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="467.0" layoutY="44.0" prefHeight="32.0" prefWidth="12.0" text="/">
+                     <font>
+                        <Font name="Corbel Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Circle fill="WHITE" layoutX="970.0" layoutY="60.0" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Label layoutX="581.0" layoutY="44.0" onMouseClicked="#showAniadePelicula" prefHeight="32.0" prefWidth="60.0" text="Añadir">
+                     <font>
+                        <Font name="Corbel Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="569.0" layoutY="45.0" prefHeight="32.0" prefWidth="12.0" text="/">
+                     <font>
+                        <Font name="Corbel Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="46.0" fitWidth="53.0" layoutX="947.0" layoutY="37.0" onMouseClicked="#showUsuario" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/user.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </top>
+         <left>
+            <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: D8DE7D;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="305.0" fitWidth="171.0" layoutX="15.0" layoutY="14.0" onMouseClicked="#goUrl" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/anuncio.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="258.0" fitWidth="171.0" layoutX="16.0" layoutY="248.0" onMouseClicked="#goUrl" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/anuncio.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="73.0" layoutY="106.0" opacity="0.6" prefHeight="55.0" prefWidth="55.0" text="AD">
+                     <font>
+                        <Font name="Corbel Bold" size="34.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="73.0" layoutY="350.0" opacity="0.6" prefHeight="55.0" prefWidth="55.0" text="AD">
+                     <font>
+                        <Font name="Corbel Bold" size="34.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="16.0" layoutY="-4.0" opacity="0.6" prefHeight="26.0" prefWidth="41.0" text="ADs">
+                     <font>
+                        <Font name="Corbel Bold" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </left>
+         <center>
+            <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ScrollPane hbarPolicy="NEVER" prefHeight="520.0" prefWidth="824.0" vbarPolicy="NEVER">
+                     <rotationAxis>
+                        <Point3D />
+                     </rotationAxis>
+                     <content>
+                        <AnchorPane prefHeight="862.0" prefWidth="824.0">
+                           <children>
+                              <Label layoutX="30.0" layoutY="30.0" prefHeight="30.0" prefWidth="178.0" text="Populares">
+                                 <font>
+                                    <Font name="System Bold" size="25.0" />
+                                 </font>
+                              </Label>
+                              <ScrollPane fx:id="scrollPopulares" hbarPolicy="ALWAYS" layoutX="12.0" layoutY="72.0" prefHeight="320.0" prefWidth="800.0" vbarPolicy="NEVER" />
+                              <Label layoutX="30.0" layoutY="400.0" prefHeight="15.0" prefWidth="178.0" text="Recientes">
+                                 <font>
+                                    <Font name="System Bold" size="25.0" />
+                                 </font>
+                              </Label>
+                              <ScrollPane fx:id="scrollRecientes" hbarPolicy="ALWAYS" layoutX="12.0" layoutY="452.0" prefHeight="320.0" prefWidth="800.0" vbarPolicy="NEVER" />
+                              <Label layoutX="30.0" layoutY="796.0" prefHeight="36.0" prefWidth="226.0" text="Mejor Valoradas">
+                                 <font>
+                                    <Font name="System Bold" size="25.0" />
+                                 </font>
+                              </Label>
+                              <ScrollPane fx:id="scrollValoradas" hbarPolicy="ALWAYS" layoutX="12.0" layoutY="860.0" prefHeight="320.0" prefWidth="800.0" vbarPolicy="NEVER" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </Pane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

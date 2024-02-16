@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="640.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UsuarioController">
+   <children>
+      <BorderPane prefHeight="640.0" prefWidth="1024.0">
+         <top>
+            <Pane prefHeight="120.0" prefWidth="1024.0" style="-fx-background-color: E4D829;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="107.0" fitWidth="156.0" layoutX="-19.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/logoCJFilms.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="332.0" layoutY="46.0" onMouseClicked="#showInicio" prefHeight="32.0" prefWidth="47.0" text="Inicio">
+                     <font>
+                        <Font name="Corbel Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="404.0" layoutY="46.0" onMouseClicked="#showBuscar" prefHeight="32.0" prefWidth="89.0" text="Buscador">
+                     <font>
+                        <Font name="Corbel Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="508.0" layoutY="46.0" onMouseClicked="#showBiblioteca" prefHeight="32.0" prefWidth="90.0" text="Biblioteca">
+                     <font>
+                        <Font name="Corbel Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="623.0" layoutY="46.0" onMouseClicked="#showAniadePelicula" prefHeight="32.0" prefWidth="65.0" text="Añadir">
+                     <font>
+                        <Font name="Corbel Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="386.0" layoutY="46.0" prefHeight="32.0" prefWidth="12.0" text="/">
+                     <font>
+                        <Font name="Corbel Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="491.0" layoutY="46.0" prefHeight="32.0" prefWidth="12.0" text="/">
+                     <font>
+                        <Font name="Corbel Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="605.0" layoutY="46.0" prefHeight="32.0" prefWidth="12.0" text="/">
+                     <font>
+                        <Font name="Corbel Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </top>
+         <center>
+            <Pane prefHeight="393.0" prefWidth="960.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="575.0" fitWidth="1048.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/fondo.jpg" />
+                     </image>
+                  </ImageView>
+                  <ScrollPane layoutX="166.0" layoutY="-3.0" prefHeight="582.0" prefWidth="692.0">
+                     <content>
+                        <Pane prefHeight="579.0" prefWidth="690.0" style="-fx-background-color: D8DE7D;">
+                           <children>
+                              <Label layoutX="62.0" layoutY="91.0" text="Datos">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Line endX="128.60003662109375" layoutX="147.0" layoutY="119.0" startX="-100.0" strokeMiterLimit="15.0" />
+                              <Label layoutX="46.0" layoutY="127.0" text="Correo: ">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="46.0" layoutY="176.0" text="Nombre:">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="46.0" layoutY="225.0" text="Contraseña: ">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="43.0" layoutY="265.0" prefHeight="34.0" prefWidth="87.0" text=" Número de">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="46.0" layoutY="289.0" prefHeight="34.0" prefWidth="72.0" text=" telefono:">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="txtSalidaCorreo" editable="false" layoutX="146.0" layoutY="125.0" style="-fx-background-color: D8DE7D;" />
+                              <TextField fx:id="txtSalidaNombre" editable="false" layoutX="146.0" layoutY="174.0" style="-fx-background-color: D8DE7D;" />
+                              <TextField fx:id="txtSalidaContrasenia" editable="false" layoutX="146.0" layoutY="221.0" style="-fx-background-color: D8DE7D;" />
+                              <TextField fx:id="txtSalidaNumeroTlf" editable="false" layoutX="146.0" layoutY="270.0" style="-fx-background-color: D8DE7D;" />
+                              <Label fx:id="nombreUsuario" layoutX="488.0" layoutY="244.0" text="Nombre de Usuario" />
+                              <TextField fx:id="txtNombreUsuario" editable="false" layoutX="466.0" layoutY="240.0" style="-fx-background-color: D8DE7D;" />
+                              <Button fx:id="editarUsuario" layoutX="510.0" layoutY="269.0" mnemonicParsing="false" onAction="#editUsuario" style="-fx-background-color: 9B9B9B; -fx-background-radius: 30;" text="Editar" />
+                              <Button fx:id="cerrarSesion" layoutX="490.0" layoutY="311.0" mnemonicParsing="false" onAction="#showLogin" style="-fx-background-color: 9B9B9B; -fx-background-radius: 30;" text="Cerrar Sesión" />
+                              <Circle fill="#f4f4f4" layoutX="540.0" layoutY="134.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" />
+                              <ImageView fitHeight="156.0" fitWidth="159.0" layoutX="462.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/user.png" />
+                                 </image>
+                              </ImageView>
+                              <Button fx:id="guardaUsuario" layoutX="487.0" layoutY="270.0" mnemonicParsing="false" onAction="#guardaUsuario" style="-fx-background-color: 9B9B9B; -fx-background-radius: 30;" text="Guardar cambios" visible="false" />
+                           </children>
+                        </Pane>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </Pane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
