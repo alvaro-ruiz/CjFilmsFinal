@@ -136,7 +136,7 @@ public class AniadeController {
     			}
     			
     			if (!txtCompañia.getText().isEmpty()) {
-    				film.setCompañia(txtCompañia.getText());
+    				film.setId_pelicula(txtCompañia.getText());
     			}
     			
     			if (!TxtAActores.getText().isEmpty()) {

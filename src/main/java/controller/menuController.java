@@ -106,8 +106,8 @@ public class menuController {
     @FXML
     private ScrollPane zonaActores;
     
-    private boolean  visto = false;
-    private boolean guardado = false;
+    private boolean  visto = true;
+    private boolean guardado = true;
     
     // Establece el stage
     public void setStage(Stage Stage) {
@@ -588,7 +588,11 @@ public class menuController {
     private boolean peliculaGuardada(int id) {
     	try  {
     		PeliculasGuardadas film = GestorSQL.searchPeliculaGuardadas(id);
-    		return true;
+    		if (film != null) {
+    			return false;
+    		} else {
+    			return true;
+    		}
     	} catch (Exception e) {
     		return false;
 		}
@@ -602,7 +606,11 @@ public class menuController {
     private boolean peliculaVistas(int id) {
     	try {
     		PeliculasVistas film = GestorSQL.searchPeliculaVista(id);
-    		return true;
+    		if (film != null) {
+    			return false;
+    		} else {
+    			return true;
+    		}
     	} catch (Exception e) {
     		return false;
 		}

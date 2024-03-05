@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="640.0" prefWidth="1024.0" stylesheets="@../application/application.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.menuController">
+   <children>
+      <BorderPane prefHeight="640.0" prefWidth="1024.0">
+         <top>
+            <Pane prefHeight="120.0" prefWidth="1024.0" style="-fx-background-color: E4D829;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="107.0" fitWidth="156.0" layoutX="-19.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/logoCJFilms.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="487.0" layoutY="46.0" onMouseClicked="#showBiblioteca" prefHeight="32.0" prefWidth="90.0" text="Biblioteca">
+                     <font>
+                        <Font name="Corbel Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Circle fill="WHITE" layoutX="980.0" layoutY="59.0" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Label layoutX="328.0" layoutY="45.0" onMouseClicked="#showInicio" prefHeight="32.0" prefWidth="47.0" text="Inicio">
+                     <font>
+                        <Font name="Corbel Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="390.0" layoutY="46.0" onMouseClicked="#showBuscar" prefHeight="32.0" prefWidth="83.0" text="Buscador">
+                     <font>
+                        <Font name="Corbel Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="475.0" layoutY="46.0" prefHeight="32.0" prefWidth="12.0" text="/">
+                     <font>
+                        <Font name="Corbel Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="378.0" layoutY="45.0" prefHeight="32.0" prefWidth="12.0" text="/">
+                     <font>
+                        <Font name="Corbel Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="46.0" fitWidth="53.0" layoutX="957.0" layoutY="36.0" onMouseClicked="#showUsuario" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/user.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="589.0" layoutY="46.0" onMouseClicked="#showAniadePelicula" prefHeight="32.0" prefWidth="90.0" text="Añadir">
+                     <font>
+                        <Font name="Corbel Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="577.0" layoutY="46.0" prefHeight="32.0" prefWidth="12.0" text="/">
+                     <font>
+                        <Font name="Corbel Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </top>
+         <center>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: CCE4D1;" BorderPane.alignment="CENTER">
+               <right>
+                  <Pane prefHeight="520.0" prefWidth="274.0" style="-fx-background-color: D8DE7D;" BorderPane.alignment="CENTER">
+                     <children>
+                        <ImageView fx:id="cartel" fitHeight="309.0" fitWidth="215.0" layoutX="32.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/Men_in_Black_International.jpg" />
+                           </image>
+                        </ImageView>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d2e1a7" height="42.0" layoutX="32.0" layoutY="373.0" stroke="BLACK" strokeType="INSIDE" width="94.0" />
+                        <Label fx:id="puntuacion" layoutX="46.0" layoutY="376.0" prefHeight="31.0" prefWidth="57.0" text="0,0">
+                           <font>
+                              <Font name="Corbel Bold" size="25.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="titulo2" layoutX="16.0" layoutY="339.0" prefHeight="32.0" prefWidth="246.0" style="-fx-text-alignment: center;" stylesheets="@../application/application.css" text="Titulo" textAlignment="CENTER">
+                           <font>
+                              <Font name="Corbel Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="check" fitHeight="32.0" fitWidth="33.0" layoutX="136.0" layoutY="379.0" onMouseClicked="#visto" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/noVisto.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="estrella" fitHeight="32.0" fitWidth="29.0" layoutX="185.0" layoutY="379.0" onMouseClicked="#guardar" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/noGuardado.png" />
+                           </image>
+                        </ImageView>
+                        <Button layoutX="32.0" layoutY="455.0" mnemonicParsing="false" onAction="#exportar" style="-fx-background-radius: 25;" text="Exportar en CSV" />                        
+                     </children>
+                  </Pane>
+               </right>
+               <center>
+                  <ScrollPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="640.0" prefWidth="734.0" style="-fx-background-color: D2E1A7;">
+                           <children>
+                              <Label layoutX="19.0" layoutY="19.0" prefHeight="32.0" prefWidth="70.0" text="Titulo:">
+                                 <font>
+                                    <Font name="Corbel Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="18.0" layoutY="57.0" prefHeight="32.0" prefWidth="89.0" text="Estreno:">
+                                 <font>
+                                    <Font name="Corbel Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="16.0" layoutY="485.0" prefHeight="32.0" prefWidth="90.0" text="Sinopsis:">
+                                 <font>
+                                    <Font name="Corbel Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="titulo" layoutX="83.0" layoutY="25.0" text="titulo">
+                                 <font>
+                                    <Font name="Corbel" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="fechaEstreno" layoutX="104.0" layoutY="65.0" text="estreno">
+                                 <font>
+                                    <Font name="Corbel" size="16.0" />
+                                 </font>
+                              </Label>
+                              <TextArea id="sinopsis" fx:id="sinopsis" editable="false" layoutX="108.0" layoutY="494.0" prefHeight="111.0" prefWidth="584.0" style="-fx-background-color: D2E1A7;" wrapText="true" />
+                              <Label layoutX="18.0" layoutY="138.0" prefHeight="32.0" prefWidth="115.0" text="Lengua Ori.:">
+                                 <font>
+                                    <Font name="Corbel Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="19.0" layoutY="99.0" prefHeight="32.0" prefWidth="89.0" text="Duración:">
+                                 <font>
+                                    <Font name="Corbel Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="18.0" layoutY="177.0" prefHeight="32.0" prefWidth="89.0" text="Dirección:">
+                                 <font>
+                                    <Font name="Corbel Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="17.0" layoutY="213.0" prefHeight="32.0" prefWidth="89.0" text="Guión:">
+                                 <font>
+                                    <Font name="Corbel Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="17.0" layoutY="252.0" prefHeight="32.0" prefWidth="89.0" text="Reparto:">
+                                 <font>
+                                    <Font name="Corbel Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <ScrollPane fx:id="zonaActores" layoutX="15.0" layoutY="292.0" prefHeight="149.0" prefWidth="718.0" />
+                              <Label layoutX="16.0" layoutY="444.0" prefHeight="32.0" prefWidth="89.0" text="Género:">
+                                 <font>
+                                    <Font name="Corbel Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lengua" layoutX="141.0" layoutY="146.0" text="leng">
+                                 <font>
+                                    <Font name="Corbel" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="duracion" layoutX="117.0" layoutY="107.0" text="duracion">
+                                 <font>
+                                    <Font name="Corbel" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="directores" layoutX="117.0" layoutY="187.0" text="director">
+                                 <font>
+                                    <Font name="Corbel" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="guionistas" layoutX="84.0" layoutY="221.0" text="guionista">
+                                 <font>
+                                    <Font name="Corbel" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="generos" layoutX="95.0" layoutY="452.0" text="genero">
+                                 <font>
+                                    <Font name="Corbel" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </ScrollPane>
+               </center>
+            </BorderPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
